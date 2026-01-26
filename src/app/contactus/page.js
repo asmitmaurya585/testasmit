@@ -65,12 +65,16 @@ export default function Page() {
                 type="email"
                 margin="normal"
               />
-
               <TextField
                 fullWidth
-                label="Password"
-                type="password"
+                label="Message"
                 margin="normal"
+                required
+                multiline
+                rows={3}
+                placeholder="Enter your message here..."
+              
+                
               />
 
               <Button
