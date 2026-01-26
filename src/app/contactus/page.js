@@ -9,14 +9,16 @@ import {
   Paper,
 } from "@mui/material";
 
-export default function Home() {
-  return (
-    <Box sx={{ p: 3}}>
+export default function Page() {
+
+    return (
+    <Box sx={{ p: 3 }}>
       <Grid container spacing={3}>
+
         {/* Title */}
         <Grid item xs={12}>
           <Typography variant="h4" fontWeight={600}>
-            Welcome To Demo App
+            Contact Us
           </Typography>
         </Grid>
 
@@ -29,26 +31,25 @@ export default function Home() {
 
         {/* LEFT SIDE - Registration Info */}
         <Grid item xs={12} md={4}>
-          <Box>
-            <Typography variant="h5" fontWeight={600} gutterBottom>
-              User Registration
-            </Typography>
-
-            <Typography variant="body2" color="text.secondary" lineHeight={1.6}>
-              Please fill in the registration form to create your account.
-              <br />
-              Make sure your email is valid and password is strong.
-              <br />
-              After registration, you will receive a confirmation email.
-            </Typography>
-          </Box>
+         <Box
+            component="img"
+            src="./contactus.png"
+            alt="Contact"
+            sx={{
+              width: "100%",
+              height: "100%",
+              maxHeight: 320,
+              //objectFit: "cover",
+              borderRadius: 2,
+            }}
+          />
         </Grid>
 
         {/* RIGHT SIDE - Registration Form */}
         <Grid item xs={12} md={8}>
           <Paper elevation={3} sx={{ p: 3 }}>
             <Typography variant="h6" fontWeight={600} gutterBottom>
-              Create Account
+              Contact Us
             </Typography>
 
             <Box component="form">
