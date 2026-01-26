@@ -1,66 +1,90 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+"use client";
+
+import {
+  Box,
+  Typography,
+  Grid,
+  TextField,
+  Button,
+  Paper,
+} from "@mui/material";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.js file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+    <Box sx={{ p: 3 }}>
+      <Grid container spacing={3}>
+
+        {/* Title */}
+        <Grid item xs={12}>
+          <Typography variant="h4" fontWeight={600}>
+            Hello Dinesh Kumar
+          </Typography>
+        </Grid>
+
+        {/* Description */}
+        <Grid item xs={12}>
+          <Typography variant="body1" color="text.secondary" lineHeight={1.7}>
+            Register to get started with our platform and access all essential features in one place. Create your account by providing basic details like your name, email, and password. Once registered, you can manage your profile, track activities, and stay connected with updates. Your information is secure, and registration takes only a few moments to complete.
+          </Typography>
+        </Grid>
+
+        {/* LEFT SIDE - Registration Info */}
+        <Grid item xs={12} md={4}>
+          <Box>
+            <Typography variant="h5" fontWeight={600} gutterBottom>
+              User Registration
+            </Typography>
+
+            <Typography variant="body2" color="text.secondary" lineHeight={1.6}>
+              Please fill in the registration form to create your account.
+              <br />
+              Make sure your email is valid and password is strong.
+              <br />
+              After registration, you will receive a confirmation email.
+            </Typography>
+          </Box>
+        </Grid>
+
+        {/* RIGHT SIDE - Registration Form */}
+        <Grid item xs={12} md={8}>
+          <Paper elevation={3} sx={{ p: 3 }}>
+            <Typography variant="h6" fontWeight={600} gutterBottom>
+              Create Account
+            </Typography>
+
+            <Box component="form">
+              <TextField
+                fullWidth
+                label="User Name"
+                margin="normal"
+              />
+
+              <TextField
+                fullWidth
+                label="Email"
+                type="email"
+                margin="normal"
+              />
+
+              <TextField
+                fullWidth
+                label="Password"
+                type="password"
+                margin="normal"
+              />
+
+              <Button
+                variant="contained"
+                size="small"
+                sx={{ mt: 2, px: 4 }}
+              >
+                Submit
+              </Button>
+            </Box>
+          </Paper>
+        </Grid>
+
+      </Grid>
+    </Box>
   );
 }
