@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flexbox Center</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center; /* horizontal */
+      align-items: center;     /* vertical */
+      background: #f8f9fa;
+    }
+    .box {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>Centered Content</h1>
+    <p>This is centered dynamically on any screen size.</p>
+    <button>Click Me</button>
+  </div>
+</body>
+</html>
